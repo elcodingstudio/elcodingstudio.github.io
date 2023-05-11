@@ -1,7 +1,7 @@
 <template>
   <div class="container w-100">
     <MainHeader />
-      <div class="mx-5 px-5">
+    <div class="mx-5 px-0">
       <div v-if="lang === 'zh-tw'">
         <div v-if="tab === 'intro'">
           <IntroPage />

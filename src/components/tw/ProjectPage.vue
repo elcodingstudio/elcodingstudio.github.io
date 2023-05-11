@@ -1,55 +1,43 @@
 <template>
-  <div>
-    <!-- 頁面標題 -->
-    <div class="container py-5">
-      <h1 class="text-center">作品 Demo 頁面</h1>
-    </div>
+  <!-- 頁面標題 -->
+  <div class="container pt-3">
+    <h3 class="text-center">專案擷圖</h3>
 
     <!-- 作品列表 -->
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <!-- 作品項目 1 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="作品圖片">
-            <div class="card-body">
-              <h5 class="card-title">作品標題 1</h5>
-              <p class="card-text">作品描述，可以是一段簡短的介紹</p>
-              <a href="#" class="btn btn-primary">查看詳情</a>
-            </div>
-          </div>
+    <div class="row mb-5" v-for="(item, index) in samples" :key="index">
+      <div class="row mb-3 mx-0">
+        <div class="col-12 bg-secondary bg-gradient text-white">
+          <h3 class="my-3">{{ index }}</h3>
         </div>
-
-        <!-- 作品項目 2 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="作品圖片">
-            <div class="card-body">
-              <h5 class="card-title">作品標題 2</h5>
-              <p class="card-text">作品描述，可以是一段簡短的介紹</p>
-              <a href="#" class="btn btn-primary">查看詳情</a>
+      </div>
+      <div class="mx-0 row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col" v-for="(k, v) in item" :key="v">
+          <div class="card text-start h-100">
+            <div class="card-header">
+              >{{ k.title }}
             </div>
-          </div>
-        </div>
-
-        <!-- 作品項目 3 -->
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="作品圖片">
-            <div class="card-body">
-              <h5 class="card-title">作品標題 3</h5>
-              <p class="card-text">作品描述，可以是一段簡短的介紹</p>
-              <a href="#" class="btn btn-primary">查看詳情</a>
-            </div>
+            <a :href="k.image" target="_blank">
+            <img class="card-img-top" :src="k.image">
+            </a>
           </div>
         </div>
       </div>
+
     </div>
+
   </div>
 </template>
 
 <script>
+import {samples} from '@/database/projects'
 export default {
+  data() {
+    return {
+      samples: samples,
+    }
+  },
+  methods: {
+  }
 }
 </script>
   

@@ -2,35 +2,39 @@
   <div class="container pt-3">
     <h3 class="text-center mb-3">有簡單或新奇的構思想寫成程式</h3>
     <h2 class="text-center mb-3">卻不知如何下手嗎？</h2>
-    <h1 class="text-center mb-3">也許，我們可以幫你實現</h1>
+    <h1 class="text-center mb-5">也許，我們可以幫你實現</h1>
     
-    <div class="row mb-5 row-cols-4">
-      <div class="col">
-        <button type="button" class="btn btn-sm btn-success w-100 mb-3">網頁程式設計</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-sm btn-success w-100 mb-3">Google試算表客製化</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-sm btn-success w-100 mb-3">Linux程式設計</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-sm btn-success w-100 mb-3">iOS/Android App</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-sm btn-success w-100 mb-3">GoLang</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-sm btn-success w-100 mb-3">node.js</button>
+    <div class="row mb-5 row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <div class="col mb-3" v-for="(item, index) in whatWeCanDo" :key="index">
+        
+        <div class="card h-100">
+          <div class="card-header">
+            {{ item.title }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-4">{{ item.description.slogan }}</h5>
+            <div class="card-text text-start mb-1 ms-2 border-bottom" v-for="(txt, i) in item.description.details" :key="i">{{ txt }}</div>
+          </div>
+          <!-- <div class="card-footer text-muted">
+            <a href="#" class="btn btn-sm btn-primary">詳細資料</a>
+          </div> -->
+        </div>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import {whatWeCanDo} from '@/database/intro'
 
-}
+export default {
+  data() {
+    return {
+      whatWeCanDo: whatWeCanDo,
+    }
+  }
+};
 </script>
 
 <style>
