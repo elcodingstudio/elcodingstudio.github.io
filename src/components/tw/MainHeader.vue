@@ -4,6 +4,9 @@
       <a class="navbar-brand ps-4" href="/">
         <img src="../../assets/images/icon.png"/>
       </a>
+      <h3 class="my-auto">
+        EL程式設計工作室
+      </h3>
       <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -52,50 +55,6 @@
         </ul>
       </div>
     </nav>
-    <!-- <div class="px-3 py-0 text-bg-dark">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-0 me-lg-auto text-white text-decoration-none">
-            <img src="../../assets/images/icon.png"/>
-          </a>
-
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li class="nav-link" @click="hanleChangeTab('intro')" :class="{ active: tab === 'intro' }">
-              <a href="#" class="text-decoration-none text-white">
-                <div>
-                  <span class="material-symbols-outlined">home</span>
-                  <div>關於我們</div>
-                </div>
-              </a>
-            </li>
-            <li class="nav-link"  @click="hanleChangeTab('projects')" :class="{ active: tab === 'projects' }">
-              <a href="#" class="text-decoration-none text-white">
-                <div>
-                  <span class="material-symbols-outlined">work_history</span>
-                  <div>作品/專案</div>
-                </div>
-              </a>
-            </li>
-            <li class="nav-link" @click="hanleChangeTab('contact')" :class="{ active: tab === 'contact' }">
-              <a href="#" class="text-decoration-none text-white">
-                <div>
-                  <span class="material-symbols-outlined">send</span>
-                  <div>聯絡我們</div>
-                </div>
-              </a>
-            </li>
-            <li class="nav-link" @click="hanleChangeTab('qa')" :class="{ active: tab === 'qa' }">
-              <a href="#" class="text-decoration-none text-white">
-                <div>
-                  <span class="material-symbols-outlined">live_help</span>
-                  <div>QA問答</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
   </header>
 </template>
 

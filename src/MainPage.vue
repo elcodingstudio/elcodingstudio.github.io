@@ -1,7 +1,7 @@
 <template>
   <div class="container w-100">
     <MainHeader />
-    <div :class="{ 'main-background': tab === 'intro' || tab === 'projects' }">
+    <div class="main-background" style="height: 1100px">
       <div class="mx-5 px-0">
         <div v-if="lang === 'zh-tw'">
           <div v-if="tab === 'intro'">
@@ -12,6 +12,9 @@
           </div>
           <div v-if="tab === 'contact'">
             <ContactPageTW />
+          </div>
+          <div v-if="tab === 'qa'">
+            <QAPage />
           </div>
         </div>
       </div>
@@ -24,13 +27,15 @@ import ContactPageTW from './components/tw/ContactPage.vue';
 import IntroPage from './components/tw/IntroPage.vue';
 import MainHeader from './components/tw/MainHeader.vue';
 import ProjectPageTW from './components/tw/ProjectPage.vue';
+import QAPage from './components/tw/QAPage.vue';
 
 export default {
   components: {
     ContactPageTW,
     ProjectPageTW,
     MainHeader,
-    IntroPage
+    IntroPage,
+    QAPage
   },
   computed: {
     tab() {

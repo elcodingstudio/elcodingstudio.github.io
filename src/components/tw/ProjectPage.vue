@@ -40,4 +40,10 @@ export default {
   }
 }
 </script>
-  
+<style>
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 200px; /* 設置您期望的圖片高度 */
+}
+</style>
