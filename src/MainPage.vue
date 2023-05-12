@@ -1,19 +1,21 @@
 <template>
   <div class="container w-100">
     <MainHeader />
-    <div class="mx-5 px-0">
-      <div v-if="lang === 'zh-tw'">
-        <div v-if="tab === 'intro'">
-          <IntroPage />
-        </div>
-        <div v-if="tab === 'projects'">
-          <ProjectPageTW />
-        </div>
-        <div v-if="tab === 'contact'">
-          <ContactPageTW />
+    <div :class="{ 'main-background': tab === 'intro' || tab === 'projects' }">
+      <div class="mx-5 px-0">
+        <div v-if="lang === 'zh-tw'">
+          <div v-if="tab === 'intro'">
+            <IntroPage />
+          </div>
+          <div v-if="tab === 'projects'">
+            <ProjectPageTW />
+          </div>
+          <div v-if="tab === 'contact'">
+            <ContactPageTW />
+          </div>
         </div>
       </div>
-    </div>    
+    </div>
   </div>
 </template>
 
@@ -46,5 +48,11 @@ export default {
 </script>
 
 <style>
-
+.main-background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/images/coding.jpg");
+  background-size: cover;
+}
 </style>
