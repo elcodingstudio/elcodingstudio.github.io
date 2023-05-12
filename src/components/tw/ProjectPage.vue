@@ -5,19 +5,19 @@
 
     <!-- 作品列表 -->
     <div class="row mb-4" v-for="(item, index) in samples" :key="index">
-      <div class="row mb-3 mx-0">
+      <!-- <div class="row mb-3 mx-0">
         <div class="col-12 bg-secondary bg-gradient text-white">
           <h3 class="my-2">{{ index }}</h3>
         </div>
-      </div>
+      </div> -->
       <div class="mx-0 row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col mb-2" v-for="(k, v) in item" :key="v">
-          <div class="card text-start h-100">
-            <div class="card-header bg-primary bg-gradient text-white">
+          <div class="card h-100">
+            <div class="card-header bg-primary bg-gradient text-white" style="font-weight: 900; font-size: 24px;">
               {{ k.title }}
             </div>
             <a :href="k.image" target="_blank">
-            <img class="card-img-top" :src="k.image">
+              <img class="card-img-top" :src="k.image">
             </a>
           </div>
         </div>

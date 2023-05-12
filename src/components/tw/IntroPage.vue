@@ -8,12 +8,13 @@
       <div class="col mb-3" v-for="(item, index) in whatWeCanDo" :key="index">
         
         <div class="card h-100">
-          <div class="card-header bg-primary bg-gradient text-white" style="font-weight: 900;">
+          <div class="card-header bg-primary bg-gradient text-white" style="font-weight: 900; font-size: 24px;">
             {{ item.title }}
           </div>
           <div class="card-body">
-            <h5 class="card-title mb-4">{{ item.description.slogan }}</h5>
-            <div class="card-text text-start mb-1 ms-2 border-bottom" v-for="(txt, i) in item.description.details" :key="i">{{ txt }}</div>
+            <!-- <h5 class="card-title mb-4">{{ item.description.slogan }}</h5> -->
+            <img :src="item.img" style="width: 100px; height: 100px;">
+            <!-- <div class="card-text text-start mb-1 ms-2 border-bottom" v-for="(txt, i) in item.description.details" :key="i">{{ txt }}</div> -->
           </div>
           <!-- <div class="card-footer text-muted">
             <a href="#" class="btn btn-sm btn-primary">詳細資料</a>
@@ -23,11 +24,11 @@
       </div>
     </div>
 
-    <div class="py-4" style="background-color: rgba(0, 0, 0, .8)">
+    <!-- <div class="py-4" style="background-color: rgba(0, 0, 0, .8)">
       <h4 class="text-white">
         EL程式設計工作室致力於為您提供最專業並客製化的程式設計服務。<br>歡迎隨時與我們聯繫，讓我們成為您的最佳合作夥伴！
       </h4>
-    </div>
+    </div> -->
   </div>
 </template>
 
