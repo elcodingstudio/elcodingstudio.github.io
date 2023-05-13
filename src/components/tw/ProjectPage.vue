@@ -1,15 +1,10 @@
 <template>
   <!-- 頁面標題 -->
-  <div class="container pt-3">
+  <div class="container pt-3 pb-1">
     <h2 class="text-center text-dark mb-4">專案擷圖</h2>
 
     <!-- 作品列表 -->
     <div class="row mb-4" v-for="(item, index) in samples" :key="index">
-      <!-- <div class="row mb-3 mx-0">
-        <div class="col-12 bg-secondary bg-gradient text-white">
-          <h3 class="my-2">{{ index }}</h3>
-        </div>
-      </div> -->
       <div class="mx-0 row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col mb-2" v-for="(k, v) in item" :key="v">
           <div class="card h-100">

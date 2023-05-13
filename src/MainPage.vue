@@ -1,7 +1,8 @@
 <template>
   <div class="container w-100 px-1">
     <MainHeader />
-    <div class="main-background" style="height: 800px">
+    
+    <div class="main-background" style="min-height: 700px">
       <div class="mx-0 px-0">
         <div v-if="lang === 'zh-tw'">
           <div v-if="tab === 'intro'">
@@ -19,12 +20,15 @@
         </div>
       </div>
     </div>
+
+    <!-- <MainFooter v-if="tab !== 'contact'"/> -->
   </div>
 </template>
 
 <script>
 import ContactPageTW from './components/tw/ContactPage.vue';
 import IntroPage from './components/tw/IntroPage.vue';
+// import MainFooter from './components/tw/MainFooter.vue';
 import MainHeader from './components/tw/MainHeader.vue';
 import ProjectPageTW from './components/tw/ProjectPage.vue';
 import QAPage from './components/tw/QAPage.vue';
@@ -35,7 +39,8 @@ export default {
     ProjectPageTW,
     MainHeader,
     IntroPage,
-    QAPage
+    QAPage,
+    // MainFooter
   },
   computed: {
     tab() {
