@@ -4,6 +4,7 @@
     <h3 class="text-center text-dark mb-3">卻不知如何下手嗎？</h3>
     <h2 class="text-center text-dark mb-5">也許，我們可以幫你實現</h2>
 
+    <h2 class="mx-auto py-2 bg-success bg-gradient col-6 col-sm-3 text-white">服務內容</h2>
     <div class="row mb-5 row-cols-1 row-cols-sm-2 row-cols-md-3">
       <div class="col mb-3" v-for="(item, index) in whatWeCanDo" :key="index">
         
