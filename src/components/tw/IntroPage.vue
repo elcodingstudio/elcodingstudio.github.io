@@ -13,22 +13,31 @@
             {{ item.title }}
           </div>
           <div class="card-body">
-            <img :src="item.img" style="width: 100px; height: 100px;">
+            <img :src="item.img" style="width: 100px; height: 100px;" data-bs-toggle="modal" data-bs-target="#IntroDetailModal" @click="showDetail(item)">
           </div>
         </div>
 
       </div>
     </div>
   </div>
+
+  <IntroDetailModal ref="detailModal" />
 </template>
 
 <script>
 import {whatWeCanDo} from '@/database/intro'
+import IntroDetailModal from '../IntroDetailModal.vue';
 
 export default {
+  components: { IntroDetailModal },
   data() {
     return {
       whatWeCanDo: whatWeCanDo,
+    }
+  },
+  methods: {
+    showDetail(item) {
+      this.$refs.detailModal.setDetail(item);
     }
   }
 };
