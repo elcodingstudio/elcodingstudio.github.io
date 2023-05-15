@@ -1,46 +1,64 @@
 <template>
   <div class="container w-100 px-1">
-    <MainHeader />
+    <MainHeaderTW v-if="lang === 'zh-tw'" />
+    <MainHeaderEN v-if="lang === 'en'" />
     
     <div class="main-background" style="min-height: 700px">
       <div class="mx-0 px-0">
-        <div v-if="lang === 'zh-tw'">
-          <div v-if="tab === 'intro'">
-            <IntroPage />
-          </div>
-          <div v-if="tab === 'projects'">
-            <ProjectPageTW />
-          </div>
-          <div v-if="tab === 'contact'">
-            <ContactPageTW />
-          </div>
-          <div v-if="tab === 'qa'">
-            <QAPage />
-          </div>
+        <div v-if="tab === 'intro'">
+          <IntroPageTW v-if="lang === 'zh-tw'" />
+          <IntroPageEN v-if="lang === 'en'" />
+        </div>
+        <div v-if="tab === 'projects'">
+          <ProjectPageTW v-if="lang === 'zh-tw'" />
+          <ProjectPageEN v-if="lang === 'en'" />
+        </div>
+        <div v-if="tab === 'contact'">
+          <ContactPageTW v-if="lang === 'zh-tw'" />
+          <ContactPageEN v-if="lang === 'en'" />
+        </div>
+        <div v-if="tab === 'qa'">
+          <QAPageTW v-if="lang === 'zh-tw'" />
+          <QAPageEN v-if="lang === 'en'" />
         </div>
       </div>
     </div>
 
-    <!-- <MainFooter v-if="tab !== 'contact'"/> -->
+    <!-- <MainFooterTW v-if="tab !== 'contact'"/> -->
   </div>
 </template>
 
 <script>
 import ContactPageTW from './components/tw/ContactPage.vue';
-import IntroPage from './components/tw/IntroPage.vue';
-// import MainFooter from './components/tw/MainFooter.vue';
-import MainHeader from './components/tw/MainHeader.vue';
+import IntroPageTW from './components/tw/IntroPage.vue';
+// import MainFooterTW from './components/tw/MainFooter.vue';
+import MainHeaderTW from './components/tw/MainHeader.vue';
 import ProjectPageTW from './components/tw/ProjectPage.vue';
-import QAPage from './components/tw/QAPage.vue';
+import QAPageTW from './components/tw/QAPage.vue';
+
+import ContactPageEN from './components/en/ContactPage.vue';
+import IntroPageEN from './components/en/IntroPage.vue';
+// import MainFooterEN from './components/en/MainFooter.vue';
+import MainHeaderEN from './components/en/MainHeader.vue';
+import ProjectPageEN from './components/en/ProjectPage.vue';
+import QAPageEN from './components/en/QAPage.vue';
 
 export default {
   components: {
+    // 中文
     ContactPageTW,
     ProjectPageTW,
-    MainHeader,
-    IntroPage,
-    QAPage,
-    // MainFooter
+    MainHeaderTW,
+    IntroPageTW,
+    QAPageTW,
+    // MainFooterTW,
+    // 英文
+    ContactPageEN,
+    IntroPageEN,
+    MainHeaderEN,
+    ProjectPageEN,
+    QAPageEN,
+    //MainFooterEN,
   },
   computed: {
     tab() {

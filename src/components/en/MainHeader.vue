@@ -1,11 +1,11 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark text-bg-dark py-0">
-      <a class="navbar-brand ms-4" href="/">
+      <a class="navbar-brand ms-4 me-0 me-md-3" href="/">
         <img src="../../assets/images/icon.png"/>
       </a>
       <h3 class="my-auto">
-        EL程式設計工作室
+        EL Programming Studio
       </h3>
       <button class="navbar-toggler collapsed" type="button" ref="navbarToggler"
         data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
@@ -20,7 +20,7 @@
             <a class="nav-link" href="#" @click="hanleChangeTab('intro')" :class="{ active: tab === 'intro' }">
               <div>
                 <span class="material-symbols-outlined">home</span>
-                <div>關於我們</div>
+                <div>About</div>
               </div>
             </a>
           </li>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="#" @click="hanleChangeTab('projects')" :class="{ active: tab === 'projects' }">
               <div>
                 <span class="material-symbols-outlined">work_history</span>
-                <div>作品/專案</div>
+                <div>Projects</div>
               </div>
             </a>
           </li>
@@ -38,19 +38,19 @@
             <a class="nav-link" href="#" @click="hanleChangeTab('contact')" :class="{ active: tab === 'contact' }">
               <div>
                 <span class="material-symbols-outlined">send</span>
-                <div>聯絡方式</div>
+                <div>Contact</div>
               </div>
             </a>
           </li>
           <!--Q & A-->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#" @click="hanleChangeTab('qa')" :class="{ active: tab === 'qa' }">
               <div>
                 <span class="material-symbols-outlined">live_help</span>
-                <div>QA問答</div>
+                <div>Q & A</div>
               </div>
             </a>
-          </li>
+          </li> -->
 
         </ul>
       </div>
@@ -84,6 +84,10 @@ export default {
       console.log(this.$route.query.tab);
       return this.$route.query.tab;
     },
+    lang() {
+      console.log(this.$route.query.tab);
+      return this.$route.query.lang;
+    }
   }
 }
 </script>
