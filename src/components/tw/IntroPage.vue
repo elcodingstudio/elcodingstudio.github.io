@@ -26,7 +26,7 @@
 
 <script>
 import {whatWeCanDo} from '@/database/intro'
-import IntroDetailModal from '../IntroDetailModal.vue';
+import IntroDetailModal from './IntroDetailModal.vue';
 
 export default {
   components: { IntroDetailModal },
