@@ -62,9 +62,15 @@ export default {
   },
   computed: {
     tab() {
+      if (!this.$route.query.tab) {
+        return "intro"
+      }
       return this.$route.query.tab;
     },
     lang() {
+      if (!this.$route.query.lang) {
+        return "zh-tw"
+      }
       return this.$route.query.lang;
     }
   },
