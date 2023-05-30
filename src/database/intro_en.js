@@ -55,6 +55,18 @@ export const whatWeCanDo = [
     tool: ["Objective-C", "JAVA", "Flutter", "iOS", "Android"]
   },
   {
+    title: "Python web scraping",
+    img: "intro/web_crawler.png",
+    description: {
+      slogan: "Developing using Python",
+      details: [
+        "Fetching the data you want from web pages",
+        "Organizing it into Excel or various formats",
+      ]
+    },
+    tool: ["python"]
+  },
+  {
     title: "Trading strategy program",
     img: "intro/gonode.png",
     description: {
