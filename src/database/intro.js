@@ -36,6 +36,7 @@ export const whatWeCanDo = [
       details: [
         "多個平台的應用程式開發",
         "協助Embedded Linux軟體的porting及功能開發",
+        "程式家教"
       ]
     },
     tool: ["C", "C++", "Objective-C", "C#", "MAC", "Linux", "Windows"]
@@ -66,16 +67,28 @@ export const whatWeCanDo = [
     tool: ["golang", "node.js"]
   },
   {
-    title: "更多服務",
-    img: "intro/more.png",
+    title: "Python爬蟲",
+    img: "intro/web_crawler.png",
+    description: {
+      slogan: "抓取網頁上你想要的資料",
+      details: [
+        "抓取網頁上你想要的資料",
+        "整理成Excel或是各種格式",
+      ]
+    },
+    tool: ["python"]
+  },
+  {
+    title: "文案發想/活動企劃",
+    img: "intro/light_bulb.png",
     description: {
       slogan: "任何事都有可能",
       details: [
         "各式報告",
         "資料整理",
-        "程式家教",
+        "活動規劃"
       ]
     },
-    tool: ["Word", "Excel", "投影片", "教學"]
+    tool: ["Word", "Excel", "投影片"]
   },
 ];

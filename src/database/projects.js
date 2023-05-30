@@ -9,5 +9,8 @@ export const samples =
     { title: "抓取加密貨幣交易所資訊", image: "googlesheet/1.png" },
     { title: "抓取台股資料", image: "googlesheet/2.png" },
     { title: "營運財務分析", image: "googlesheet/3.jpg" },
+  ],
+  "Python爬蟲": [
+    { title: "爬商品資料並整理成Excel", image: "python/1.jpg" }
   ]
 };
