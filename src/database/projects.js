@@ -11,6 +11,8 @@ export const samples =
     { title: "營運財務分析", image: "googlesheet/3.jpg" },
   ],
   "Python爬蟲": [
-    { title: "爬商品資料並整理成Excel", image: "python/1.jpg" }
+    { title: "爬商品資料並整理成Excel", image: "python/1.jpg" },
+    { title: "文案發想/活動企劃 集合1", image: "plan/1.jpg" },
+    { title: "文案發想/活動企劃 集合2", image: "plan/2.jpg" },
   ]
 };
